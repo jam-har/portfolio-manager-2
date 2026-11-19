@@ -22,4 +22,13 @@ public class BankAccount implements Valuable {
     public BigDecimal getValue() {
         return balance;
     }
+
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "name='" + name + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
 }

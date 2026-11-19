@@ -1,7 +1,6 @@
 package com.pluralsight;
 
-import com.pluralsight.finance.BankAccount;
-import com.pluralsight.finance.Valuable;
+import com.pluralsight.finance.*;
 
 import java.math.BigDecimal;
 
@@ -18,5 +17,13 @@ public class FinanceApplication  {
         //or cast it as a bank account for all the methods to be useful.
 
         System.out.println(account1.getValue());
+
+        Portfolio portfolio = new Portfolio("person", "company");
+        portfolio.add(new House("person", 1987, 1300, 2));
+        portfolio.add(new Gold("watch", 2.2));
+
+        System.out.println(portfolio.getValue());
+        System.out.println(portfolio.getLeastValuable().toString());
+        System.out.println(portfolio.getMostValuable().toString());
     }
 }

@@ -3,15 +3,22 @@ package com.pluralsight.finance;
 import java.math.BigDecimal;
 
 public class Gold extends FixedAsset {
-    private double Weight;
+    private double weight;
 
     public Gold(String name, double weight) {
         super(name);
-        Weight = weight;
+        this.weight = weight;
     }
 
     @Override
     public BigDecimal getValue() {
-        return null;
+       return BigDecimal.valueOf(weight).multiply(new BigDecimal("3685.80"));
+    }
+
+    @Override
+    public String toString() {
+        return "Gold{" +
+                "weight=" + weight +
+                '}';
     }
 }
